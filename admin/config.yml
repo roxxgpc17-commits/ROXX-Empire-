@@ -1,0 +1,121 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - label: "Site Configuration"
+        name: "site_config"
+        file: "site-data.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Eyebrow Text", name: "eyebrow", widget: "string", default: "Est. 2026 · Premium Collection"}
+              - {label: "Tagline", name: "tagline", widget: "string", default: "The New Standard"}
+          - label: "Brand Section"
+            name: "brand"
+            widget: "object"
+            fields:
+              - {label: "Heading (line 1)", name: "heading1", widget: "string", default: "Art That Speaks."}
+              - {label: "Heading (line 2)", name: "heading2", widget: "string", default: "Empire That Lasts."}
+              - {label: "Description", name: "description", widget: "text", default: "ROXX EMPIRE was built on one principle — premium creative work deserves a premium home. Every print, every piece, every drop is designed with intention and crafted without compromise."}
+              - {label: "CTA Text", name: "cta", widget: "string", default: "Shop The Collection"}
+          - label: "Footer Brand"
+            name: "footer_brand"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", default: "ROXX"}
+              - {label: "Subtitle", name: "subtitle", widget: "string", default: "Empire"}
+              - {label: "Tagline", name: "tagline", widget: "string", default: "THE NEW STANDARD"}
+
+  - name: "contact_banners"
+    label: "Contact Banners"
+    files:
+      - label: "Contact Info"
+        name: "contact_info"
+        file: "contact-data.json"
+        fields:
+          - label: "YouTube Banner"
+            name: "youtube"
+            widget: "object"
+            fields:
+              - {label: "Label", name: "label", widget: "string", default: "YouTube"}
+              - {label: "Icon", name: "icon", widget: "string", default: "▶"}
+              - {label: "Link", name: "link", widget: "string", required: false}
+          - label: "Instagram Banner"
+            name: "instagram"
+            widget: "object"
+            fields:
+              - {label: "Label", name: "label", widget: "string", default: "Instagram"}
+              - {label: "Icon", name: "icon", widget: "string", default: "◉"}
+              - {label: "Link", name: "link", widget: "string", required: false}
+          - label: "Email Banner"
+            name: "email"
+            widget: "object"
+            fields:
+              - {label: "Label", name: "label", widget: "string", default: "Email"}
+              - {label: "Icon", name: "icon", widget: "string", default: "✉"}
+              - {label: "Link", name: "link", widget: "string", required: false}
+          - label: "DM Message"
+            name: "dm_message"
+            widget: "string"
+            default: "DM for custom works — we bring your vision to life."
+
+  - name: "footer_nav"
+    label: "Footer Links"
+    files:
+      - label: "Navigation Columns"
+        name: "footer_links"
+        file: "footer-links.json"
+        fields:
+          - label: "Column 1 Title"
+            name: "col1_title"
+            widget: "string"
+            default: "Navigate"
+          - label: "Column 1 Links"
+            name: "col1_links"
+            widget: "list"
+            fields:
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          - label: "Column 2 Title"
+            name: "col2_title"
+            widget: "string"
+            default: "Info"
+          - label: "Column 2 Links"
+            name: "col2_links"
+            widget: "list"
+            fields:
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+
+  - name: "products"
+    label: "Products"
+    files:
+      - label: "Product Catalog"
+        name: "products"
+        file: "products.json"
+        fields:
+          - label: "Art Prints"
+            name: "art"
+            widget: "list"
+            fields:
+              - {label: "Product Name", name: "name", widget: "string"}
+              - {label: "Category", name: "category", widget: "string", default: "Digital Print · Limited Edition"}
+              - {label: "Price (USD)", name: "price", widget: "number", value_type: "float"}
+              - {label: "Image", name: "image", widget: "image", required: false}
+          - label: "Apparel"
+            name: "apparel"
+            widget: "list"
+            fields:
+              - {label: "Product Name", name: "name", widget: "string"}
+              - {label: "Category", name: "category", widget: "string", default: "Apparel · Unisex"}
+              - {label: "Price (USD)", name: "price", widget: "number", value_type: "float"}
+              - {label: "Image", name: "image", widget: "image", required: false}
