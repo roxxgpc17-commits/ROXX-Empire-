@@ -1,0 +1,16 @@
+{
+  "col1_title": "Navigate",
+  "col1_links": [
+    { "text": "Home", "url": "#" },
+    { "text": "Art Prints", "url": "#art-section" },
+    { "text": "Apparel", "url": "#apparel-section" },
+    { "text": "Our Story", "url": "#about-section" }
+  ],
+  "col2_title": "Info",
+  "col2_links": [
+    { "text": "Shipping Policy", "url": "#" },
+    { "text": "Returns", "url": "#" },
+    { "text": "Contact", "url": "#" },
+    { "text": "FAQ", "url": "#" }
+  ]
+}
