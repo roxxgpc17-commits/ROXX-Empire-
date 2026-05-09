@@ -1,0 +1,18 @@
+{
+  "youtube": {
+    "label": "YouTube",
+    "icon": "▶",
+    "link": ""
+  },
+  "instagram": {
+    "label": "Instagram",
+    "icon": "◉",
+    "link": ""
+  },
+  "email": {
+    "label": "Email",
+    "icon": "✉",
+    "link": "mailto:contact@roxxempire.com"
+  },
+  "dm_message": "DM for custom works — we bring your vision to life."
+}
